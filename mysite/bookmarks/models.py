@@ -9,6 +9,9 @@ class School(models.Model):
     name_director = models.CharField(max_length=50)
     address_school = models.CharField(max_length=100)
 
+    def __str__(self):
+        return "{}".format(self.name_school)
+
 
 class Student(models.Model):
     name_student = models.CharField(max_length=50)
@@ -16,12 +19,18 @@ class Student(models.Model):
     school_student = models.CharField(max_length=50)
     age_student = models.IntegerField()
 
+    def __str__(self):
+        return "{} - {}".format(self.name_student, self.surname_student)
+
 
 class Teacher(models.Model):
     name_teacher = models.CharField(max_length=50)
     surname_teacher = models.CharField(max_length=50)
     school_teacher = models.CharField(max_length=50)
     age_teacher = models.IntegerField()
+
+    def __str__(self):
+        return "{} - {}".format(self.name_teacher, self.surname_teacher)
 
 
 class Bookmarks(models.Model):

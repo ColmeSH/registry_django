@@ -6,7 +6,7 @@ from .models import Student
 
 
 def index(request):
-    list_students = Student.objects.order_by('id')[:5]
+    list_students = Student.objects.order_by('id')[:3]
     context = {'list_students': list_students}
     return render(request, 'bookmarks/index.html', context)
 
