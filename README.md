@@ -7,7 +7,7 @@
 - pip freeze > requirements.txt
 
 ###Create a project
-- $ django-admin startproject myapp
+- $ django-admin startproject myproject
 
 ###Verify if it works
 - $ python manage.py runserver
