@@ -17,6 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^bookmarks/', include('bookmarks.urls')),#here bookmarks
+    url(r'^school/', include('bookmarks.urls')),#here bookmarks
     url(r'^admin/', admin.site.urls),#here admin
 ]

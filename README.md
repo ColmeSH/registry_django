@@ -27,3 +27,12 @@ or
 ###Create models
 - edit myapp/models.py file ---> create a class python
 - $ python manage.py makemigrations myapp
+- $ python manage.py sqlmigrate myapp 0001 --print SQL in to the screen
+- $ python manage.py migrate
+
+###Playing with the API
+- $ python magage.py shell
+>>> from myapp.models import Bookmarks, Marks, Student
+example:
+>>> Student.objects.all()   ---> query on student model 
+>>> s1 = Student()          ---> create object student
