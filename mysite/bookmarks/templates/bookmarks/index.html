@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+    <h1>The list of the students</h1>
+
+    {% if list_students %}
+        <ul>
+        {% for student in list_students %}
+            <li><a href="/school/student/{{ student.id }}/info">{{ student.name_student }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+    <p>No Student are subscribes.</p>
+    {% endif %}
+
+</body>
+</html>

@@ -19,6 +19,10 @@
 - edit view.py file --from django.http import HttpResponse
 - map the url in urls.py file
 
+###More views
+- edit views.py file with new HttpResponse views
+- update myapp/urls.py with new views
+
 ##DATABASE SETUP
 - python manage.py migrate
 or
@@ -31,8 +35,16 @@ or
 - $ python manage.py migrate
 
 ###Playing with the API
-- $ python magage.py shell
+- $ python manage.py shell
 >>> from myapp.models import Bookmarks, Marks, Student
+
 example:
 >>> Student.objects.all()   ---> query on student model 
+
 >>> s1 = Student()          ---> create object student
+>>> s1.save()               ---> save in database
+
+$ python manage.py createsuperuser
+
+
+
