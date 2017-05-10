@@ -5,8 +5,10 @@ from django.shortcuts import render, get_object_or_404
 from .models import Student
 from .models import Teacher
 from .models import School
+from classes.bookmarks import Bookmarks
 
 
+#homepage
 def index(request):
     list_students = Student.objects.order_by('id')[:3]
     list_teachers = Teacher.objects.order_by('age_teacher')[::-1]
@@ -17,20 +19,21 @@ def index(request):
     return render(request, 'bookmarks/index.html', context)
 
 
+#details of the student
 def student_info(request, student_id):
     student = get_object_or_404(Student, pk=student_id)
-    return render(request, 'bookmarks/student_info.html', {'student': student})
+    bookmark = Bookmarks(student.get_fullname())
+
+    return render(request, 'bookmarks/student_info.html', {'student': student, 'bookmarks': bookmark})
 
 
+#details of the teacher
 def teacher_info(request, teacher_id):
     teacher = get_object_or_404(Teacher, pk=teacher_id)
     return render(request, 'bookmarks/teacher_info.html', {'teacher': teacher})
 
 
-# def student_marks(request, student_id):
-#     return HttpResponse("here show list of marks or show object bookmarks of student at id: {}".format(student_id))
-
-
+#description of the school
 def description(request, school_id):
     # print name_school
     school = get_object_or_404(School, pk=school_id)

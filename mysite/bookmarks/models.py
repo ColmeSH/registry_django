@@ -22,6 +22,9 @@ class Student(models.Model):
     def __str__(self):
         return "{} - {}".format(self.name_student, self.surname_student)
 
+    def get_fullname(self):
+        return "{} {}".format(self.name_student, self.surname_student)
+
 
 class Teacher(models.Model):
     name_teacher = models.CharField(max_length=50)

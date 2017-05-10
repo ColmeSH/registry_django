@@ -29,8 +29,20 @@
     <p>AGE: <i>{{ student.age_student}}</i></p>
     <p>SCHOOL: <i><strong>{{ student.school_student}}</strong></i></p>
 
+    <!-- accordion to insert mark in bookmarks -->
+    <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseAddmark" aria-expanded="false" aria-controls="collapseAddmark">
+        Add Mark
+    </button>
+    <div class="col-md-4 collapse" id="collapseAddmark">
+        <div class="well">
+            <form class="form-group" action="#" method="post">
+                <input type="text" class="form-control" name="mark" placeholder="Type your mark"><br />
+                <input type="submit" class="btn btn-success" value="Send">
+            </form>
+        </div>
+    </div>
+    <!-- end accordion -->
 
-    <a class="btn btn-success" href="/school/">Add Mark</a>
     <a class="btn btn-info" href="/school/">Show Bookmark</a>
     <a class="btn btn-default" href="/school/">Homepage</a>
 
