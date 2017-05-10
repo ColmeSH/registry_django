@@ -33,13 +33,11 @@ class Teacher(models.Model):
         return "{} - {}".format(self.name_teacher, self.surname_teacher)
 
 
-class Bookmarks(models.Model):
-    name_school = models.CharField(max_length=50)
-    name_student = models.CharField(max_length=50)
+# class Bookmarks(models.Model):
+#     name_school = models.CharField(max_length=50)
+#     name_student = models.CharField(max_length=50)
+#
 
-
-class Marks(models.Model):
-    subject = models.CharField(max_length=30)
-    value = models.IntegerField()
-
-
+# class Marks(models.Model):
+#     subject = models.CharField(max_length=30)
+#     value = models.IntegerField()

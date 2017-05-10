@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>student_info</title>
+    <title>Base</title>
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -15,25 +15,14 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous">
     </script>
-
 </head>
-<body>
-<div class="container">
+<body class="container">
 
 
-    <h1>{{ student.name_student }}<small> details:</small></h1>
-    <img src="https://placehold.it/150x150"><br /><br />
-    <p>ID: <i>{{ student.id}}</i></p>
-    <p>NAME: <i>{{ student.name_student}}</i></p>
-    <p>SURNAME: <i>{{ student.surname_student}}</i></p>
-    <p>AGE: <i>{{ student.age_student}}</i></p>
-    <p>SCHOOL: <i><strong>{{ student.school_student}}</strong></i></p>
+    {% block container %}
+
+    {% endblock %}
 
 
-    <a class="btn btn-success" href="/school/">Add Mark</a>
-    <a class="btn btn-info" href="/school/">Show Bookmark</a>
-    <a class="btn btn-default" href="/school/">Homepage</a>
-
-</div>
 </body>
 </html>
